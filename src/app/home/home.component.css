@@ -1,0 +1,19 @@
+mat-sidenav-container{
+    height: 100%;
+}
+mat-sidenav,mat-sidenav-content{
+    padding: 16px;
+}
+mat-sidenav{
+    width: 250px;
+    padding: 0;
+    margin: 0;
+}
+mat-nav-list.a{
+    width: 100%;
+    text-align: center;
+}
+mat-nav-list{
+    padding: 0;
+    margin: 0;
+}

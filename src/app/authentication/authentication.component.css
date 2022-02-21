@@ -1,0 +1,24 @@
+
+.example-center{
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.card{
+    width: 30rem;
+    background-color: rgb(236, 236, 236);
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+
+  button{
+      width: 100%;
+  }
