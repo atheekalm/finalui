@@ -1,11 +1,15 @@
 .card-spacing{
   margin: 5px;
   display: inline-block;
+  margin-top: 5px;
 }
 mat-card{
   width: 250px;
   border-radius: 20px;
   /* margin: 50px; */
+}
+.location-icon{
+  font-size: 15px;
 }
 .small{
   font-weight:300;

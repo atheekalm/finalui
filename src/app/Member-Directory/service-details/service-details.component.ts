@@ -10,6 +10,7 @@ export class ServiceDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

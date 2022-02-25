@@ -1,0 +1,20 @@
+mat-card{
+    margin: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+img{
+    padding: 10px;
+    border-radius: 50%;
+}
+.card-content{
+    /* display: inline-block; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+p{
+    /* margin: 100px; */
+    padding: 50px;
+}
+
+.header{
+    padding: 15px;
+}
