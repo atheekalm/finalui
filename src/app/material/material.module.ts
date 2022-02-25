@@ -10,12 +10,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDialogModule} from '@angular/material/dialog';
-
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
 const materialcomponents = [
+  MatCheckboxModule,
+  MatMenuModule,
+  MatBadgeModule,
   MatDialogModule,
   MatGridListModule,
   MatSliderModule,
@@ -24,6 +29,7 @@ const materialcomponents = [
   MatToolbarModule,
   MatSidenavModule,
   MatListModule,
+  MatTabsModule,
   MatCardModule,
   MatFormFieldModule,
   MatInputModule

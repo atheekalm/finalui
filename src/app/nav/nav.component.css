@@ -1,3 +1,20 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+  .button-bg{
+    background-color: rgb(122, 122, 47);
+    color: white;
+    /* font-weight:600 */
+  }
+
+  .message-btn{
+    border: none;
+    cursor: pointer;
+    background-color: rgb(245 , 245, 245);
+  }
+
+  img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }

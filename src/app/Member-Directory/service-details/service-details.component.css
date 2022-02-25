@@ -2,9 +2,10 @@ mat-card{
     margin: 25px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-img{
+.img-style{
     padding: 10px;
     border-radius: 50%;
+    display: inline-block;
 }
 .card-content{
     /* display: inline-block; */
@@ -16,5 +17,9 @@ p{
 }
 
 .header{
-    padding: 15px;
+    padding: 20px;
+}
+
+.image-grid{
+    margin: 30px;
 }
