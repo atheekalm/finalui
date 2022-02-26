@@ -23,3 +23,8 @@ p{
 .image-grid{
     margin: 30px;
 }
+
+mat-card-actions{
+    padding: 0%;
+    margin: 0%;
+}

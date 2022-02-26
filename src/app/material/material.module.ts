@@ -14,10 +14,16 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 
 
 const materialcomponents = [
+  MatDatepickerModule,
+  MatNativeDateModule,
+  MatSelectModule,
   MatCheckboxModule,
   MatMenuModule,
   MatBadgeModule,

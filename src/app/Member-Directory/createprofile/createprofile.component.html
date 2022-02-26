@@ -1,1 +1,98 @@
-<p>createprofile works!</p>
+<div class="container">
+
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>FirstName</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" appearance="outline">
+        <mat-label>Gender</mat-label>
+        <mat-select>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" appearance="outline">
+        <input matInput [matDatepicker]="myDatePicker">
+        <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-form-field class="form-width row-input" floatLabel="auto" appearance="outline">
+        <mat-label>About</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Education</mat-label>
+        <input matInput required />
+    </mat-form-field>
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Skills</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+    <mat-form-field class="form-width" floatLabel="auto" appearance="outline">
+        <mat-label>Salary</mat-label>
+        <input matInput required />
+    </mat-form-field>
+
+
+
+    <mat-form-field class="form-width" appearance="outline">
+        <mat-label>District</mat-label>
+        <mat-select>
+            <mat-option value="Male">Male</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-width" appearance="outline">
+        <mat-label>City</mat-label>
+        <mat-select>
+            <mat-option value="Male">Male</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-width" appearance="outline">
+        <mat-label>Category</mat-label>
+        <mat-select>
+            <mat-option value="Male">Male</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-width" appearance="outline">
+        <mat-label>SubCategory</mat-label>
+        <mat-select>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+
+<button mat-raised-button color="primary">Create Profile</button>
+
+
+</div>
