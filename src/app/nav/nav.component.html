@@ -1,36 +1,41 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" routerLinkActive="router-link-active"
+    aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>My App</span>
+  <span routerLink="/">My App</span>
   <span class="example-spacer"></span>
-  <button class="button-bg" mat-stroked-button>
+  <button class="button-bg" routerLink="/createprofile" mat-stroked-button *ngIf="auth.currentUser$ |async">
     <mat-icon>add</mat-icon>
     Create Profile
   </button>
-  <button class="message-btn">
+  <button class="message-btn" routerLink="/messages" *ngIf="auth.currentUser$ |async">
     <mat-icon matBadge="15" matBadgeColor="warn">mail_outline</mat-icon>
   </button>
-  <button mat-button>Login</button>
-  <button mat-button>Register</button>
+  <ng-container *ngIf="(auth.currentUser$ | async) === null">
+    <button mat-button routerLink="/login">Login</button>
+    <button mat-button>Register</button>
+  </ng-container>
 
 
-<img src="https://randomuser.me/api/portraits/men/26.jpg" alt="">
-  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-    <mat-icon>more_vert</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>edit</mat-icon>
-      <span>Edit</span>
+  <ng-container *ngIf="auth.currentUser$ |async">
+    <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
     </button>
-    <button mat-menu-item disabled>
-      <mat-icon>voicemail</mat-icon>
-      <span>Check voice mail</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>logout</mat-icon>
-      <span>LogOut</span>
-    </button>
-  </mat-menu>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>edit</mat-icon>
+        <span>Edit</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voice mail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>logout</mat-icon>
+        <span (click)="logout()">LogOut</span>
+      </button>
+    </mat-menu>
+  </ng-container>
 </mat-toolbar>

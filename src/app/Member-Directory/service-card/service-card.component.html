@@ -1,12 +1,12 @@
 <div class="card-spacing">
   <mat-card class="action-content">
     <mat-card-title align="center">
-      <img class="image-styles" src="https://randomuser.me/api/portraits/men/26.jpg">
+      <img class="image-styles" src={{serviceprovider.photoUrl}}>
       <div class="small"> <small>
           <mat-icon class="location-icon">place</mat-icon>
         </small>
-        Kuliyapitiya</div>
-      <div class="name">Atheek Ahammed</div>
+        {{serviceprovider.city}}</div>
+      <div class="name">{{serviceprovider.lasttName}}</div>
     </mat-card-title>
     <mat-card-content>
       <mat-grid-list cols="3" rowHeight="50px">

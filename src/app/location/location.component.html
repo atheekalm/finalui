@@ -1,1 +1,9 @@
-<p>location works!</p>
+<mat-nav-list role="list">
+    <ng-container class="container" *ngFor="let District of Districts">
+        <a mat-list-item >
+            {{District.districtName}}
+            <mat-icon>chevron_right</mat-icon>
+        </a>
+    </ng-container>
+
+</mat-nav-list>

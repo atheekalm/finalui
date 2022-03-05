@@ -1,8 +1,9 @@
 mat-sidenav-container{
-    height: 100%;
+    height: 110%;
 }
 mat-sidenav,mat-sidenav-content{
     padding: 16px;
+    height: 100vh;
 }
 mat-sidenav{
     width: 250px;
@@ -33,3 +34,13 @@ mat-form-field{
 .icon-style{
     margin-right: 10px;
 }
+
+
+.mat-drawer:not(.mat-drawer-side) {
+    position: fixed;
+}
+
+.mat-drawer-backdrop {
+    position: fixed !important;
+}
+

@@ -45,6 +45,8 @@
 
 
     <mat-sidenav-content>
-        <app-service-card></app-service-card>
+        
+        <app-service-list></app-service-list>
     </mat-sidenav-content>
 </mat-sidenav-container>
+<mat-paginator [pageSizeOptions]="[5,10,15]" ></mat-paginator>

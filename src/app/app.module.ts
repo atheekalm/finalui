@@ -15,6 +15,11 @@ import { ServiceDetailsComponent } from './Member-Directory/service-details/serv
 import { ServiceCardComponent } from './Member-Directory/service-card/service-card.component';
 import { NavComponent } from './nav/nav.component';
 import { LocationComponent } from './location/location.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -31,16 +36,21 @@ import { LocationComponent } from './location/location.component';
     ServiceDetailsComponent,
     ServiceCardComponent,
     NavComponent,
-    LocationComponent
+    LocationComponent,
+    DashboardComponent,
+    NotfoundComponent
   ],
 
   imports: [
     BrowserModule,
+    ToastrModule.forRoot({ positionClass: "toast-top-right" }),
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule,
+    FormsModule
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })

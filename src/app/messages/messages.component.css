@@ -1,0 +1,80 @@
+
+.image-grid{
+    margin: 30px;
+}
+
+mat-card-actions{
+    padding: 0%;
+    margin: 0%;
+}
+
+mat-list-item{
+    margin-bottom: 7px;
+}
+
+.button-style{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-color: rgb(63, 81, 181);
+    border: none;
+}
+.mat-icon{
+    color: white;
+}
+
+mat-sidenav{
+    width: 300px;
+    padding: 0;
+    margin: 0;
+
+}
+
+.img-m-style{
+    width: 50PX;
+    height: 50PX;
+    border-radius: 50%;
+    margin: 5px;
+    margin-right: 15px;
+}
+
+mat-nav-list{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.badge{
+    margin-left: 100px;
+}
+
+/* .card-message{
+    height: 100vh;
+} */
+
+.cc{
+    height: 70vh;
+}
+
+mat-sidenav-container{
+    height: 90vh;
+}
+
+
+mat-card-content{
+    height: 73.1vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+mat-card{
+    /* height: 100vh; */
+}
+
+mat-form-field{
+    width: 90%;
+}
+button{
+margin: 0%;
+padding: 0%;
+}

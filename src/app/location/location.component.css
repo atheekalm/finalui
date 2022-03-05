@@ -1,0 +1,10 @@
+mat-nav-list{
+    height: 90vh;
+}
+.container{
+    display: inline-block;
+    width: '400px';
+}
+mat-icon{
+    padding-left: '50px';
+}

@@ -1,17 +1,23 @@
-<div class="example-center">
+<form class="example-center" #loginForm="ngForm" (ngSubmit)="login()">
     <mat-card class="card" align="center">
-        <mat-form-field floatLabel="auto" appearance="fill">
+        <mat-form-field floatLabel="auto" appearance="outline">
             <mat-label>UserName</mat-label>
-            <input matInput>
+            <input 
+            name="username"
+            [(ngModel)]="model.username"
+            matInput>
         </mat-form-field>
         <br>
-        <mat-form-field floatLabel="auto" appearance="fill">
+        <mat-form-field floatLabel="auto" appearance="outline">
             <mat-label>Password</mat-label>
-            <input matInput type="password">
+            <input matInput type="password"
+            name="password"
+            [(ngModel)]="model.password"
+            >
         </mat-form-field>
         <button mat-flat-button color="primary">Login</button>
 
         
         
     </mat-card>
-</div>
+</form >
