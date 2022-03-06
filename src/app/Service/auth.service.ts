@@ -4,16 +4,18 @@ import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { ReplaySubject } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = "https://localhost:5001/api/";
+  baseUrl = environment.baseUrl;
   private currentuserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentuserSource.asObservable();
+  logeduser:User =JSON.parse(localStorage.getItem('user'));
 
-  constructor(private http: HttpClient,private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { }
   userlogin(model: any) {
     return this.http.post(this.baseUrl + "Auth/Login", model).pipe(
       map((response: User) => {

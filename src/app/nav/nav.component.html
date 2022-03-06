@@ -3,7 +3,7 @@
     aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span routerLink="/">My App</span>
+  <span routerLink="/" class="logo">My App</span>
   <span class="example-spacer"></span>
   <button class="button-bg" routerLink="/createprofile" mat-stroked-button *ngIf="auth.currentUser$ |async">
     <mat-icon>add</mat-icon>
@@ -12,6 +12,12 @@
   <button class="message-btn" routerLink="/messages" *ngIf="auth.currentUser$ |async">
     <mat-icon matBadge="15" matBadgeColor="warn">mail_outline</mat-icon>
   </button>
+  <button [matMenuTriggerFor]="appMenu" class="message-btn" *ngIf="auth.currentUser$ |async">
+    <mat-icon matBadge="5" matBadgeColor="warn">notifications_active</mat-icon>
+  </button>
+  <mat-menu #appMenu="matMenu">
+    <button mat-button>silva accepted</button>
+  </mat-menu>
   <ng-container *ngIf="(auth.currentUser$ | async) === null">
     <button mat-button routerLink="/login">Login</button>
     <button mat-button>Register</button>
@@ -19,7 +25,7 @@
 
 
   <ng-container *ngIf="auth.currentUser$ |async">
-    <img src="https://randomuser.me/api/portraits/men/26.jpg" alt="">
+    <img src="{{auth.logeduser.photoUlr || '../../../assets/user.png'}}" alt="">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <mat-icon>more_vert</mat-icon>
     </button>

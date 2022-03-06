@@ -8,8 +8,9 @@ mat-card-actions{
     margin: 0%;
 }
 
-mat-list-item{
-    margin-bottom: 7px;
+.mat-list-item{
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .button-style{
@@ -67,14 +68,26 @@ mat-card-content{
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
-mat-card{
-    /* height: 100vh; */
-}
-
 mat-form-field{
     width: 90%;
 }
 button{
 margin: 0%;
 padding: 0%;
+}
+
+.container{
+    margin: 100px;
+    margin-top: 30px;
+}
+.example-form{
+    position: absolute;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+}
+
+.msg-send{
+    padding: 8px;
+    margin: 2px;
 }

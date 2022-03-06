@@ -1,4 +1,15 @@
-<mat-tab-group>
+<!-- <div *ngIf="profile">{{profile.lasttName}}</div> -->
+
+
+
+
+
+
+
+
+
+
+<mat-tab-group *ngIf="profile">
     <mat-tab label="Profile">
         <mat-card>
             <mat-card-actions align="end">
@@ -7,12 +18,12 @@
                 </button>
                 <button mat-raised-button color="primary">Send invitation</button>
             </mat-card-actions>
-            <mat-card-title>
+            <mat-card-title >
                 <div class="header">
-                    Atheek ahammed
+                    {{profile.firstName}} {{profile.lasttName}} 
                 </div>
                 <mat-card-content class="card-content">
-                    <img class="img-style" src="https://randomuser.me/api/portraits/men/26.jpg" alt="">
+                    <img class="img-m-style" src="{{profile.photoUrl  || '../../../assets/user.png'}}"  alt="">
                 </mat-card-content>
                 <mat-list>
                     <mat-list-item>
@@ -151,17 +162,7 @@
 
     <mat-tab label="Photos">
 
-        <mat-grid-list class="image-grid" gutterSize="8px" cols="4" rowHeight="150px">
-            <mat-grid-tile *ngFor="let item of list; 
-            let index = index;" [rowspan]="item.rows" [colspan]="item.cols">
-
-                <img src="https://picsum.photos/200/{{300 + index}}" alt=""
-                    style="object-fit: cover; width: 100%; height: 100%;">
-
-
-
-            </mat-grid-tile>
-        </mat-grid-list>
+        
 
     </mat-tab>
     <mat-tab label="Messages">

@@ -1,6 +1,6 @@
 <mat-nav-list role="list">
     <ng-container class="container" *ngFor="let District of Districts">
-        <a mat-list-item >
+        <a mat-list-item (click)="GetSelectedCities(District.id)">
             {{District.districtName}}
             <mat-icon>chevron_right</mat-icon>
         </a>

@@ -4,10 +4,19 @@
   .button-bg{
     background-color: rgb(122, 122, 47);
     color: white;
+    margin-right: 30px;
     /* font-weight:600 */
   }
 
+
+  @media screen and (max-width: 700px) {
+    .button-bg {
+      display: none;
+    }
+  }
+
   .message-btn{
+    margin-right: 30px;
     border: none;
     cursor: pointer;
     background-color: rgb(245 , 245, 245);
@@ -17,4 +26,8 @@
     border-radius: 50%;
     width: 40px;
     height: 40px;
+  }
+
+  .logo{
+    cursor: pointer;
   }

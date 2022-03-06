@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { District } from '../Models/location';
+import { City, District } from '../Models/location';
 import { LocationService } from '../Service/location.service';
 
 @Component({
@@ -8,31 +8,35 @@ import { LocationService } from '../Service/location.service';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
-  Districts: any;
-  Cities: any;
-  SelecteCity: any;
+  Districts: District[];
+  Cities: City[];
+  SelecteCity: City[];
   constructor(private location: LocationService) { }
 
   ngOnInit() {
     this.getdistricts();
     this.getcities();
   }
-  
-  GetSelectedCity(id: number) {
-    if (this.Cities){
-      this.Cities.filter(x=>x)
+
+  GetSelectedCities(id: number) {
+    if (this.Cities.length) {
+      this.SelecteCity = this.Cities.filter(x => x.districtId === id);
+      console.log(this.SelecteCity);
+      return this.SelecteCity
     }
+    return null
+
   }
-  
+
   getcities() {
-    this.location.cities().subscribe(res => {
-      this.Cities = res
+    this.location.getcities().subscribe(cities => {
+      this.Cities = cities
     })
   }
 
   getdistricts() {
-    this.location.districts().subscribe(res => {
-      this.Districts = res;
+    this.location.getdistricts().subscribe(districts => {
+      this.Districts = districts;
     })
   }
 

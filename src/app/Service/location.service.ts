@@ -1,18 +1,20 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { City, District } from '../Models/location';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
-  baseUrl = "https://localhost:5001/api/";
+  baseUrl = environment.baseUrl;
 
   constructor(private http: HttpClient) { }
 
-  districts() {
-    return this.http.get(this.baseUrl + "Location/Districts");
+  getdistricts() {
+    return this.http.get<District[]>(this.baseUrl + "Location/Districts");
   }
-  cities() {
-    return this.http.get(this.baseUrl + "Location/Cities");
+  getcities() {
+    return this.http.get<City[]>(this.baseUrl + "Location/Cities");
   }
 }

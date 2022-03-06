@@ -19,6 +19,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: '', component: HomeComponent },
+      { path: 'service/:id', component: ServiceDetailsComponent },
       { path: 'service', component: ServiceDetailsComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'card', component: ServiceCardComponent },
@@ -26,7 +27,7 @@ const routes: Routes = [
       { path: 'services', component: ServiceListComponent },
     ]
   },
-  { path: '**', component: NotfoundComponent, pathMatch: 'full' }
+  { path: '**', component: AuthenticationComponent, pathMatch: 'full' }
 ];
 
 

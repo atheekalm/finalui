@@ -1,7 +1,8 @@
 <div class="card-spacing">
   <mat-card class="action-content">
     <mat-card-title align="center">
-      <img class="image-styles" src={{serviceprovider.photoUrl}}>
+      <img class="image-styles" src="{{serviceprovider.photoUrl || '../../../assets/user.png'}}">
+
       <div class="small"> <small>
           <mat-icon class="location-icon">place</mat-icon>
         </small>
@@ -27,7 +28,7 @@
       </mat-grid-list>
     </mat-card-content>
     <mat-card-actions class="action-content">
-      <button mat-flat-button color="primary">View</button>
+      <button mat-flat-button color="primary" routerLink="/service/{{serviceprovider.id}}">View</button>
     </mat-card-actions>
   </mat-card>
 </div>

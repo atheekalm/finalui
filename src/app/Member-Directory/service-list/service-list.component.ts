@@ -1,5 +1,7 @@
+import { AppuserService } from './../../Service/appuser.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/Models/profile';
 
 @Component({
   selector: 'app-service-list',
@@ -7,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./service-list.component.css']
 })
 export class ServiceListComponent implements OnInit {
-  profiles: any;
-  constructor(private http: HttpClient) { }
+  profiles: Profile[];
+  constructor(private http: HttpClient, private appuser: AppuserService) { }
 
 
   ngOnInit() {
-    this.getprofiles()
+    this.getprofiles();
   }
 
   getprofiles() {
-    this.http.get('https://localhost:5001/api/Service/Services').subscribe(res => {
-      this.profiles = res
+    this.appuser.getprofiles().subscribe(profile => {
+      this.profiles = profile
     }, error => {
       console.log(error)
     })
