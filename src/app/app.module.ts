@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { CategoryComponent } from './category/category.component';
 
 
 
@@ -38,7 +39,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     NavComponent,
     LocationComponent,
     DashboardComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    CategoryComponent
   ],
 
   imports: [

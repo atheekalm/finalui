@@ -7,16 +7,20 @@ import { Profile } from '../Models/profile';
   providedIn: 'root'
 })
 export class AppuserService {
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
   getprofile(id: number) {
     return this.http.get<Profile>(this.baseUrl + "Service/" + id)
   }
-  
+
   getprofiles() {
     return this.http.get<Profile[]>(this.baseUrl + 'Service/Services');
+  }
+
+  checkProfileExist(id: number) {
+    return this.http.get<boolean>(this.baseUrl + 'LoggedUser/CheckProfileExist/' + id)
   }
 
 }

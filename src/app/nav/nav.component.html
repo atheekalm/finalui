@@ -5,10 +5,14 @@
   </button>
   <span routerLink="/" class="logo">My App</span>
   <span class="example-spacer"></span>
-  <button class="button-bg" routerLink="/createprofile" mat-stroked-button *ngIf="auth.currentUser$ |async">
-    <mat-icon>add</mat-icon>
-    Create Profile
-  </button>
+
+  <ng-container *ngIf="!profileExist">
+    <button class="button-bg" routerLink="/createprofile" mat-stroked-button *ngIf="auth.currentUser$ |async">
+      <mat-icon>add</mat-icon>
+      Create Profile
+    </button>
+  </ng-container>
+
   <button class="message-btn" routerLink="/messages" *ngIf="auth.currentUser$ |async">
     <mat-icon matBadge="15" matBadgeColor="warn">mail_outline</mat-icon>
   </button>

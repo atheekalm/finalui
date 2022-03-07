@@ -7,7 +7,7 @@ import { City, District } from '../Models/location';
   providedIn: 'root'
 })
 export class LocationService {
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 

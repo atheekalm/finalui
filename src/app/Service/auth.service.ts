@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl = environment.baseUrl;
+  baseUrl = environment.apiUrl;
   private currentuserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentuserSource.asObservable();
   logeduser:User =JSON.parse(localStorage.getItem('user'));

@@ -1,3 +1,4 @@
+import { CategoryComponent } from './../category/category.component';
 import { LocationComponent } from './../location/location.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -17,7 +18,10 @@ export class HomeComponent implements OnInit {
   }
 
   openDialogLocaton() {
-    this.dialog.open(LocationComponent)
+    this.dialog.open(LocationComponent);
+  }
+  openDialogCategory() {
+    this.dialog.open(CategoryComponent);
   }
 
 }
