@@ -1,9 +1,9 @@
 <mat-toolbar>
-  <button mat-icon-button class="example-icon" routerLinkActive="router-link-active"
+  <button *ngIf="auth.currentUser$ |async" mat-icon-button class="example-icon" routerLinkActive="router-link-active"
     aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span routerLink="/" class="logo">My App</span>
+  <span routerLink="/" class="logo" *ngIf="auth.currentUser$ |async">My App</span>
   <span class="example-spacer"></span>
 
   <ng-container *ngIf="!profileExist">
@@ -34,7 +34,7 @@
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item routerLink="/profile/edit">
         <mat-icon>edit</mat-icon>
         <span>Edit</span>
       </button>

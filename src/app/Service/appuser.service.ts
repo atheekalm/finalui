@@ -14,6 +14,9 @@ export class AppuserService {
   getprofile(id: number) {
     return this.http.get<Profile>(this.baseUrl + "Service/" + id)
   }
+  getprofilebyid(id: number) {
+    return this.http.get<Profile>(this.baseUrl + "Service/myprofile/" + id)
+  }
 
   getprofiles() {
     return this.http.get<Profile[]>(this.baseUrl + 'Service/Services');

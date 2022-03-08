@@ -1,3 +1,6 @@
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { CatchErrorInterceptor } from './interceptors/catch-error.interceptor';
+import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,11 +19,14 @@ import { ServiceCardComponent } from './Member-Directory/service-card/service-ca
 import { NavComponent } from './nav/nav.component';
 import { LocationComponent } from './location/location.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { CategoryComponent } from './category/category.component';
+import { ServiceEditComponent } from './Member-Directory/service-edit/service-edit.component';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -40,7 +46,9 @@ import { CategoryComponent } from './category/category.component';
     LocationComponent,
     DashboardComponent,
     NotfoundComponent,
-    CategoryComponent
+    CategoryComponent,
+    ServiceEditComponent,
+    NotFoundComponent,
   ],
 
   imports: [
@@ -50,10 +58,15 @@ import { CategoryComponent } from './category/category.component';
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxGalleryModule,
+    FileUploadModule
   ],
 
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: CatchErrorInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

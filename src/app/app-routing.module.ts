@@ -1,3 +1,4 @@
+import { ServiceEditComponent } from './Member-Directory/service-edit/service-edit.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ServiceDetailsComponent } from './Member-Directory/service-details/service-details.component';
 import { ServiceCardComponent } from './Member-Directory/service-card/service-card.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'service/:id', component: ServiceDetailsComponent },
+      { path: 'profile/edit', component: ServiceEditComponent },
       { path: 'service', component: ServiceDetailsComponent },
       { path: 'messages', component: MessagesComponent },
       { path: 'card', component: ServiceCardComponent },
@@ -27,7 +29,8 @@ const routes: Routes = [
       { path: 'services', component: ServiceListComponent },
     ]
   },
-  { path: '**', component: AuthenticationComponent, pathMatch: 'full' }
+  { path: 'not-found', component: NotfoundComponent },
+  { path: '**', component: AuthenticationComponent, pathMatch: 'full' },
 ];
 
 
