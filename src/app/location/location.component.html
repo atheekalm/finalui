@@ -1,17 +1,18 @@
-<div class="col-1">
-    <mat-nav-list role="list">
-        <ng-container class="container" *ngFor="let District of Districts">
-            <a mat-list-item (click)="GetSelectedCities(District.id)">
-                {{District.districtName}}
-            </a>
-        </ng-container>
-    </mat-nav-list>
-</div>
-
-<div class="col-2">
-    <mat-nav-list *ngIf="SelecteCity">
-        <ng-container *ngFor="let city of SelecteCity">
-            <a mat-list-item>{{city.citytName}}</a>
-        </ng-container>
-    </mat-nav-list>
+<div class="flex-container">
+    <div class="flex-child magenta">
+        <mat-nav-list role="list">
+            <ng-container class="container" *ngFor="let District of Districts">
+                <a mat-list-item (click)="GetSelectedCities(District.id)">
+                    {{District.districtName}}
+                </a>
+            </ng-container>
+        </mat-nav-list>
+    </div>
+    <div class="flex-child green">
+        <mat-nav-list *ngIf="SelecteCity">
+            <ng-container *ngFor="let city of SelecteCity">
+                <a mat-list-item>{{city.citytName}}</a>
+            </ng-container>
+        </mat-nav-list>
+    </div>
 </div>

@@ -14,14 +14,13 @@ export class LocationComponent implements OnInit {
   constructor(private location: LocationService) { }
 
   ngOnInit() {
-    this.getdistricts();
     this.getcities();
+    this.getdistricts();
   }
 
   GetSelectedCities(id: number) {
-    if (this.Cities.length) {
+    if (this.Cities) {
       this.SelecteCity = this.Cities.filter(x => x.districtId === id);
-      console.log(this.SelecteCity);
       return this.SelecteCity
     }
     return null
