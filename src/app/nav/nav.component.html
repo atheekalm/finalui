@@ -42,9 +42,9 @@
         <mat-icon>voicemail</mat-icon>
         <span>Check voice mail</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item (click)="logout()">
         <mat-icon>logout</mat-icon>
-        <span (click)="logout()">LogOut</span>
+        <span >LogOut</span>
       </button>
     </mat-menu>
   </ng-container>

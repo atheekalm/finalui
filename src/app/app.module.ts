@@ -27,6 +27,7 @@ import { CategoryComponent } from './category/category.component';
 import { ServiceEditComponent } from './Member-Directory/service-edit/service-edit.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { DdComponent } from './dd/dd.component';
 
 
 
@@ -49,6 +50,7 @@ import { FileUploadModule } from 'ng2-file-upload';
     CategoryComponent,
     ServiceEditComponent,
     NotFoundComponent,
+    DdComponent,
   ],
 
   imports: [

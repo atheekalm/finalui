@@ -1,4 +1,15 @@
-
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 80vh;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .example-center{
     align-items: center;
     align-content: center;

@@ -1,9 +1,9 @@
-<div *ngFor="let profile of profiles">
+<div class="content-list" *ngFor="let profile of profiles">
     <app-service-card [serviceprovider]="profile"></app-service-card>
 </div>
 
 
-
+<!-- 
 <ng-container *ngIf="pagination">
     <mat-paginator class="example-pagi" [hidePageSize]="true" 
     [pageSize]="pagination.TotalPages"
@@ -11,4 +11,4 @@
     
     >
     </mat-paginator>
-</ng-container>
+</ng-container> -->

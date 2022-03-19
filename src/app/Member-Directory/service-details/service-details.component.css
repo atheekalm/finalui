@@ -1,4 +1,83 @@
+.main-container{
+    margin: 0 50px;
+}
 
+.container-row{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+mat-tab-group,mat-tab {
+    background-color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+
+
+@media screen and (min-width: 700px){
+    mat-tab-group{
+        height: 80vh;
+    }
+    .main-container{
+        /* margin: 20px 100px; */
+        /* display: flex; */
+        justify-content: center;
+    }
+    .sidebar{
+    display: flex;    
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* text-align: center; */
+    width: 250px;
+    height: 80vh;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 30px;
+    }
+    
+    .main-content{
+    flex-grow: 1;
+    margin: 5px;
+    border-radius: 30px;
+
+
+    }
+    .sidebar-childrens{
+        margin-top: 25px;
+        margin-left: 15px;
+    }
+    .img-m-style{
+        width: 128px;
+        height: 128px;
+        border-radius: 20px;
+    }
+    .image-wrapper{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 mat-card{
     margin: 25px;
@@ -10,11 +89,9 @@ mat-card{
     display: inline-block;
 }
 .card-content{
-    /* display: inline-block; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 p{
-    /* margin: 100px; */
     padding: 50px;
 }
 
@@ -73,10 +150,6 @@ mat-nav-list{
     margin-left: 100px;
 }
 
-/* .card-message{
-    height: 100vh;
-} */
-
 .cc{
     height: 70vh;
-}
+} */

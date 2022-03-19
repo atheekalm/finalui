@@ -1,45 +1,112 @@
-<mat-sidenav-container>
+<!-- <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
-        <mat-form-field appearance="outline">
-            <mat-label>Search</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <mat-nav-list>
-            <mat-list-item (click)="openDialogLocaton()">
-                <mat-icon class="icon-style">gps_fixed</mat-icon>
-                Location
-            </mat-list-item>
-            <mat-list-item (click)="openDialogCategory()">
-                <mat-icon class="icon-style">category</mat-icon>
-                Category
-            </mat-list-item>
-            <mat-list-item>
-                <mat-icon class="icon-style">star_border</mat-icon>
-                Top Profiles
-            </mat-list-item>
-            <mat-list-item>
-                <mat-icon class="icon-style">phone</mat-icon>
-                Over the call
-            </mat-list-item>
-            <mat-list-item>
-                <mat-icon class="icon-style">gps_fixed</mat-icon>
-                Location
-            </mat-list-item>
-            <mat-list-item>
-                <mat-icon class="icon-style">add_business</mat-icon>
-                SMEs
-            </mat-list-item>
-        </mat-nav-list>
+        <div class="sidebar-wrapper">
+            <div class="sidebar">
+                <div class="form-class sidebar-group">
+                    <mat-form-field appearance="outline" style=" padding-bottom: 0">
+                        <mat-label>Search</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>search</mat-icon>
+                    </mat-form-field>
+                </div>
+                <mat-nav-list class="sidebar-group">
+                    <mat-list-item (click)="openDialogLocaton()">
+                        <mat-icon class="icon-style">gps_fixed</mat-icon>
+                        Location
+                    </mat-list-item>
+                    <mat-list-item (click)="openDialogCategory()">
+                        <mat-icon class="icon-style">category</mat-icon>
+                        Category
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">star_border</mat-icon>
+                        Top Profiles
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">phone</mat-icon>
+                        Over the call
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">gps_fixed</mat-icon>
+                        Location
+                    </mat-list-item>
+                </mat-nav-list>
 
+                <mat-nav-list class="sidebar-group">
+                    <mat-list-item>
+                        <mat-icon class="icon-style">engineering</mat-icon>
+                        Individuals
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">add_business</mat-icon>
+                        SMEs
+                    </mat-list-item>
+                </mat-nav-list>
 
-        
-
+            </div>
+        </div>
     </mat-sidenav>
-
-
-
     <mat-sidenav-content>
-        
         <app-service-list></app-service-list>
     </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+
+<div class="container-wrapper">
+    <div class="container">
+        <div class="sidebar-wrapper">
+            <div class="sidebar">
+                <div class="form-class sidebar-group">
+                    <mat-form-field appearance="outline" style=" padding-bottom: 0">
+                        <mat-label>Search</mat-label>
+                        <input matInput>
+                        <mat-icon matSuffix>search</mat-icon>
+                    </mat-form-field>
+                </div>
+                <mat-nav-list class="sidebar-group">
+                    <mat-list-item (click)="openDialogLocaton()">
+                        <mat-icon class="icon-style">gps_fixed</mat-icon>
+                        Location
+                    </mat-list-item>
+                    <mat-list-item (click)="openDialogCategory()">
+                        <mat-icon class="icon-style">category</mat-icon>
+                        Category
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">star_border</mat-icon>
+                        Top Profiles
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">phone</mat-icon>
+                        Over the call
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">gps_fixed</mat-icon>
+                        Location
+                    </mat-list-item>
+                </mat-nav-list>
+
+                <mat-nav-list class="sidebar-group">
+                    <mat-list-item>
+                        <mat-icon class="icon-style">engineering</mat-icon>
+                        Individuals
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon class="icon-style">add_business</mat-icon>
+                        SMEs
+                    </mat-list-item>
+                </mat-nav-list>
+
+            </div>
+        </div>
+        <div class="maincontent-wrapper">
+            <div class="main-content">
+                <app-service-list></app-service-list>
+                <app-service-list></app-service-list>
+                <app-service-list></app-service-list>
+                <app-service-list></app-service-list>
+                <app-service-list></app-service-list>
+            </div>
+        </div>
+    </div>
+</div>

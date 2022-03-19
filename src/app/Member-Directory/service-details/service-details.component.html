@@ -1,3 +1,105 @@
+<div class="main-container" *ngIf="profile">
+    <div class="container-row">
+        <div class="sidebar">
+            <div class="image-wrapper">
+                <img class="img-m-style" src="{{profile.photoUrl  || '../../../assets/user.png'}}" alt="">
+            </div>
+            <div class="sidebar-childrens">
+                <div class="header">
+                    {{profile.firstName}} {{profile.lasttName}}
+                </div>
+                <div>atheek</div>
+                <div><mat-icon>monetization_on</mat-icon>500LKR</div> 
+                <div>atheek</div>
+                <div>atheek</div>
+                <div class="icon-container">
+                    <mat-icon>phone_iphone</mat-icon>
+                    <mat-icon>mail_outline</mat-icon>
+                    <mat-icon>mail_outline</mat-icon>
+                </div>
+                <button mat-raised-button color="primary">Send invitation</button>
+            </div>
+
+        </div>
+        <div class="main-content">
+            <mat-tab-group *ngIf="profile">
+                <mat-tab label="Profile">
+                   
+                </mat-tab>
+
+
+                <mat-tab label="Info">
+
+                    <mat-card>
+                        <mat-card-content>
+                            <mat-card-content class="card-content">
+
+                            </mat-card-content>
+                        </mat-card-content>
+                        <mat-card-actions>
+
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-tab>
+
+
+
+
+
+
+
+                <mat-tab label="Photos">
+
+                    <ngx-gallery [options]="galleryOptions" [images]="galleryImages"
+                        style="display: inline-block; margin-bottom: 20px;"></ngx-gallery>
+
+                </mat-tab>
+                <mat-tab label="Messages">
+
+
+
+
+                </mat-tab>
+
+
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- <div *ngIf="profile">{{profile.lasttName}}</div> -->
 
 
@@ -9,7 +111,7 @@
 
 
 
-<mat-tab-group *ngIf="profile">
+<!-- <mat-tab-group *ngIf="profile">
     <mat-tab label="Profile">
         <mat-card>
             <mat-card-actions align="end">
@@ -172,4 +274,4 @@
         
 
     </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->

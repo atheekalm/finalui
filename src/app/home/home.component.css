@@ -1,46 +1,41 @@
-mat-sidenav-container{
-    height: 110%;
-}
-mat-sidenav,mat-sidenav-content{
-    padding: 16px;
-    height: 100vh;
-}
-mat-sidenav{
-    width: 250px;
-    padding: 0;
-    margin: 0;
+@media screen and (min-width: 992px) {
 
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-mat-nav-list.a{
-    width: 100%;
-    text-align: center;
+.sidebar-wrapper{
+    padding: 10px;
+    border-radius: 20px;
+    height: 100%;
+    
 }
-mat-nav-list{
-    padding: 0;
-    margin: 0;
+.sidebar{
+    width: 230px;
 }
-mat-form-field{
-    /* margin: 10px; */
+.sidebar-group{
+    background-color: white;
     margin-top: 10px;
-    margin-left: 22px;
-
+    border-radius: 10px;
+}
+.form-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.margin-left{
-    margin-left: 25px;
-
-}
-
+:host ::ng-deep .form-class div.mat-form-field-wrapper{
+    padding-bottom: 0;
+    /* padding: 10px; */
+  }
 .icon-style{
-    margin-right: 10px;
+    padding-right: 15px;
 }
 
 
-.mat-drawer:not(.mat-drawer-side) {
-    position: fixed;
+.maincontent-wrapper{
+    width: 1200px;
+}  
 }
-
-.mat-drawer-backdrop {
-    position: fixed !important;
-}
-

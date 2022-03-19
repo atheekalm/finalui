@@ -1,34 +1,46 @@
-<div class="card-spacing">
-  <mat-card class="action-content">
-    <mat-card-title align="center">
-      <img class="image-styles" src="{{serviceprovider.photoUrl || '../../../assets/user.png'}}">
 
-      <div class="small"> <small>
-          <mat-icon class="location-icon">place</mat-icon>
-        </small>
-        {{serviceprovider.city}}</div>
-      <div class="name">{{serviceprovider.lasttName}}</div>
-    </mat-card-title>
-    <mat-card-content>
-      <mat-grid-list cols="3" rowHeight="50px">
-        <mat-grid-tile>
-          <mat-icon class="green">task_alt</mat-icon>
-          <h3>253</h3>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-icon class="yellow">star</mat-icon>
-          <div>
-            <h3>4.1</h3>
-          </div>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-icon class="red">visibility</mat-icon>
-          <h3>121</h3>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </mat-card-content>
-    <mat-card-actions class="action-content">
-      <button mat-flat-button color="primary" routerLink="/service/{{serviceprovider.id}}">View</button>
-    </mat-card-actions>
-  </mat-card>
+
+<div class="card-wrapper">
+  <div class="card-container">
+    <div class="card-image-profile">
+      <div class="online-status">
+        <img class="image-styles" src="{{serviceprovider.photoUrl || '../../../assets/user.png'}}" alt="">
+      </div>
+        <!-- <img class="image-styles" src="{{serviceprovider.photoUrl || '../../../assets/user.png'}}" alt=""> -->
+    </div>
+    <div class="card-text">
+      <div class="city">
+        <mat-icon class="location-icon">place</mat-icon>
+        {{serviceprovider.city}}
+      </div>
+    
+      <div class="service">
+        {{serviceprovider.lasttName}}
+      </div>
+    </div>
+    <div class="card-showcase-bar">
+      <div class="card-completed-task">
+        <mat-icon class="green">task_alt</mat-icon>
+        <h3>253</h3>
+      </div>
+      <div class="card-rating">
+        <mat-icon class="yellow">star</mat-icon>
+          <h3>4.1</h3>
+      </div>
+      <div class="card-views">
+        <mat-icon class="red">visibility</mat-icon>
+        <h3>121</h3>
+      </div>
+    </div>
+    <!-- <div class="services-provide">
+      <div class="chips-list">
+        <div class="chip">
+          Programmer
+        </div>
+      </div>
+    </div> -->
+  </div>
+  <button mat-flat-button color="primary" routerLink="/service/{{serviceprovider.id}}">View</button>
 </div>
+
+
